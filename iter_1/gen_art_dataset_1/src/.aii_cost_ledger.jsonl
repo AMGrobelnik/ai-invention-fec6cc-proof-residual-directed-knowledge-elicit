@@ -1,0 +1,6 @@
+{"ts": 1780707765.8491864, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "\"FOLIO dataset\" natural language first-order logic Han 2022", "count": 5}
+{"ts": 1780707765.8634956, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "\"RuleTaker\" dataset \"Transformers as Soft Reasoners\" Clark 2020", "count": 5}
+{"ts": 1780707766.003955, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "\"CLUTRR\" dataset kinship compositional language understanding Sinha", "count": 5}
+{"ts": 1780707766.06867, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "\"ProofWriter\" dataset OWA proof generation Tafjord allenai", "count": 5}
+{"ts": 1780707766.1157746, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "\"EntailmentBank\" dataset entailment trees Dalvi 2021", "count": 5}
+{"ts": 1780707766.274584, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "\"LogicNLI\" dataset first-order logical reasoning NLI Tian 2021", "count": 5}

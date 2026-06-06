@@ -1,0 +1,163 @@
+{
+  "folio": {
+    "dataset": "folio",
+    "total_rows": 1204,
+    "label_distribution": {
+      "True": {
+        "count": 460,
+        "pct": 38.2
+      },
+      "False": {
+        "count": 351,
+        "pct": 29.2
+      },
+      "Uncertain": {
+        "count": 393,
+        "pct": 32.6
+      }
+    },
+    "mean_depth": 3.0,
+    "max_depth": 3,
+    "fraction_with_gold_predicates": 1.0,
+    "mean_gold_predicate_count": 15.94,
+    "mean_entity_count": 6.13
+  },
+  "proofwriter": {
+    "dataset": "proofwriter",
+    "total_rows": 50000,
+    "label_distribution": {
+      "False": {
+        "count": 14332,
+        "pct": 28.7
+      },
+      "Unknown": {
+        "count": 21469,
+        "pct": 42.9
+      },
+      "True": {
+        "count": 14199,
+        "pct": 28.4
+      }
+    },
+    "mean_depth": 5.09,
+    "max_depth": 9,
+    "fraction_with_gold_predicates": 1.0,
+    "mean_gold_predicate_count": 8.61,
+    "mean_entity_count": 5.15
+  },
+  "ruletaker": {
+    "dataset": "ruletaker",
+    "total_rows": 60000,
+    "label_distribution": {
+      "entailment": {
+        "count": 29963,
+        "pct": 49.9
+      },
+      "not entailment": {
+        "count": 30037,
+        "pct": 50.1
+      }
+    },
+    "mean_depth": 5.0,
+    "max_depth": 5,
+    "fraction_with_gold_predicates": 0.0,
+    "mean_gold_predicate_count": 0.0,
+    "mean_entity_count": 4.94
+  },
+  "clutrr": {
+    "dataset": "clutrr",
+    "total_rows": 30000,
+    "label_distribution": {
+      "True": {
+        "count": 30000,
+        "pct": 100.0
+      }
+    },
+    "mean_depth": 3.17,
+    "max_depth": 10,
+    "fraction_with_gold_predicates": 1.0,
+    "mean_gold_predicate_count": 4.17,
+    "mean_entity_count": 4.85
+  },
+  "pilot_split": {
+    "dataset": "pilot",
+    "total_rows": 200,
+    "label_distribution": {
+      "not entailment": {
+        "count": 50,
+        "pct": 25.0
+      },
+      "True": {
+        "count": 100,
+        "pct": 50.0
+      },
+      "entailment": {
+        "count": 50,
+        "pct": 25.0
+      }
+    },
+    "mean_depth": 4.08,
+    "max_depth": 10,
+    "fraction_with_gold_predicates": 0.5,
+    "mean_gold_predicate_count": 2.08,
+    "mean_entity_count": 4.92
+  },
+  "held_out": {
+    "dataset": "held_out",
+    "total_rows": 200,
+    "label_distribution": {
+      "not entailment": {
+        "count": 50,
+        "pct": 25.0
+      },
+      "entailment": {
+        "count": 50,
+        "pct": 25.0
+      },
+      "True": {
+        "count": 100,
+        "pct": 50.0
+      }
+    },
+    "mean_depth": 4.12,
+    "max_depth": 10,
+    "fraction_with_gold_predicates": 0.5,
+    "mean_gold_predicate_count": 2.12,
+    "mean_entity_count": 4.99
+  },
+  "combined": {
+    "dataset": "combined",
+    "total_rows": 51604,
+    "label_distribution": {
+      "True": {
+        "count": 33510,
+        "pct": 64.9
+      },
+      "False": {
+        "count": 3163,
+        "pct": 6.1
+      },
+      "Uncertain": {
+        "count": 393,
+        "pct": 0.8
+      },
+      "entailment": {
+        "count": 5116,
+        "pct": 9.9
+      },
+      "not entailment": {
+        "count": 5084,
+        "pct": 9.9
+      },
+      "Unknown": {
+        "count": 4338,
+        "pct": 8.4
+      }
+    },
+    "mean_depth": 3.9,
+    "max_depth": 10,
+    "fraction_with_gold_predicates": 0.802,
+    "mean_gold_predicate_count": 4.49,
+    "mean_entity_count": 4.94
+  }
+}

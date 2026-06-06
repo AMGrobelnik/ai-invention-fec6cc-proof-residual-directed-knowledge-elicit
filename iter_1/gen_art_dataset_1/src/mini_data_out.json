@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "description": "Neuro-symbolic reasoning benchmarks: FOLIO, ProofWriter, RuleTaker, CLUTRR",
+    "source": "HuggingFace: tasksource/folio, tasksource/proofwriter, tasksource/ruletaker, kendrivp/CLUTRR_v1_extracted",
+    "schema_version": "exp_sel_data_out_v1"
+  },
+  "datasets": [
+    {
+      "dataset": "folio",
+      "examples": [
+        {
+          "input": "Context: All people who regularly drink coffee are dependent on caffeine. People regularly drink coffee, or they don't want to be addicted to caffeine, or both. No one who doesn't want to be addicted to caffeine is unaware that caffeine is a drug. Rina is either a student who is unaware that caffeine is a drug, or she is not a student and is she aware that caffeine is a drug. Rina  is either a student who is dependent on caffeine, or she is not a student and not dependent on caffeine. Question: Rina doesn't want to be addicted to caffeine or is unaware that caffeine is a drug.",
+          "output": "True",
+          "metadata_id": "folio_1126",
+          "metadata_depth": 3,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 12,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_space": "True|False|Uncertain",
+          "metadata_story_id": "406"
+        },
+        {
+          "input": "Context: All people who regularly drink coffee are dependent on caffeine. People regularly drink coffee, or they don't want to be addicted to caffeine, or both. No one who doesn't want to be addicted to caffeine is unaware that caffeine is a drug. Rina is either a student who is unaware that caffeine is a drug, or she is not a student and is she aware that caffeine is a drug. Rina  is either a student who is dependent on caffeine, or she is not a student and not dependent on caffeine. Question: Rina eith doesn't want to be addicted to caffeine or is unaware that caffeine is a drug.",
+          "output": "True",
+          "metadata_id": "folio_1127",
+          "metadata_depth": 3,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 12,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_space": "True|False|Uncertain",
+          "metadata_story_id": "406"
+        },
+        {
+          "input": "Context: All people who regularly drink coffee are dependent on caffeine. People regularly drink coffee, or they don't want to be addicted to caffeine, or both. No one who doesn't want to be addicted to caffeine is unaware that caffeine is a drug. Rina is either a student who is unaware that caffeine is a drug, or she is not a student and is she aware that caffeine is a drug. Rina  is either a student who is dependent on caffeine, or she is not a student and not dependent on caffeine. Question: Rina either regularly drinks coffee or is unaware that caffeine is a drug.",
+          "output": "False",
+          "metadata_id": "folio_1128",
+          "metadata_depth": 3,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 12,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_space": "True|False|Uncertain",
+          "metadata_story_id": "406"
+        }
+      ]
+    },
+    {
+      "dataset": "proofwriter",
+      "examples": [
+        {
+          "input": "Context: The bald eagle is kind. The bald eagle is nice. The bald eagle is rough. The bald eagle does not need the cat. The cat is cold. The cat needs the mouse. The dog eats the mouse. The dog is kind. The dog is round. The dog likes the cat. The dog needs the bald eagle. The mouse is nice. The mouse does not like the bald eagle. The mouse likes the dog. If someone likes the dog then they eat the dog. If someone eats the dog then they eat the cat. Round people are nice. If someone eats the cat then the cat likes the dog. If someone needs the mouse and they do not eat the cat then they do not like the mouse. Question: The cat does not eat the dog.",
+          "output": "False",
+          "metadata_id": "proofwriter_RelNeg-OWA-D5-729",
+          "metadata_depth": 5,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 7,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_space": "True|False|Unknown",
+          "metadata_config": "depth-5"
+        },
+        {
+          "input": "Context: Bob is nice. Bob is smart. Bob is white. Bob is young. Charlie is furry. Charlie is smart. Dave is blue. Dave is smart. Dave is white. Gary is not furry. If Gary is not smart then Gary is not young. If Charlie is smart then Charlie is not blue. If someone is round then they are nice. If someone is furry and not blue then they are round. If Charlie is nice then Charlie is round. If someone is furry and nice then they are young. If Bob is young and Bob is nice then Bob is not round. If someone is smart and young then they are white. Question: Charlie is not round.",
+          "output": "False",
+          "metadata_id": "proofwriter_AttNeg-OWA-D5-365",
+          "metadata_depth": 5,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 10,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_space": "True|False|Unknown",
+          "metadata_config": "depth-5"
+        },
+        {
+          "input": "Context: The cat needs the cow. The cat needs the lion. The cow is nice. The cow visits the lion. The dog does not visit the cat. The dog visits the lion. The lion sees the cow. If something sees the cow and the cow sees the lion then it is nice. If something is young and nice then it sees the cat. If something sees the dog and it sees the cow then it is green. If something needs the cow and it does not need the lion then the lion is blue. If something sees the lion and it visits the lion then the lion visits the cow. All nice things are young. If something sees the cat and the cat needs the cow then the cat is nice. If the cat is not nice then the cat is not blue. Question: The cat is not nice.",
+          "output": "False",
+          "metadata_id": "proofwriter_RelNeg-OWA-D5-566",
+          "metadata_depth": 5,
+          "metadata_split": "test",
+          "metadata_gold_predicate_count": 7,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 3,
+          "metadata_label_space": "True|False|Unknown",
+          "metadata_config": "depth-5"
+        }
+      ]
+    },
+    {
+      "dataset": "ruletaker",
+      "examples": [
+        {
+          "input": "Context: The bald eagle visits the mouse The cow is big The cow visits the mouse The lion is round The lion is young The lion sees the cow The mouse visits the lion If someone is red and they see the bald eagle then the bald eagle visits the cow If someone sees the mouse then the mouse visits the lion If someone is round then they need the lion If the lion visits the mouse then the mouse is round If someone sees the cow and they need the bald eagle then they need the mouse If someone needs the mouse then they visit the mouse If someone sees the mouse and the mouse is young then they are big If someone needs the lion then the lion needs the bald eagle. Question: The mouse is round.",
+          "output": "entailment",
+          "metadata_id": "ruletaker_5352990588035340412",
+          "metadata_depth": 5,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 0,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 2,
+          "metadata_label_space": "entailment|not entailment",
+          "metadata_config": "depth-5"
+        },
+        {
+          "input": "Context: Bob is big Bob is kind Bob is smart Charlie is blue Charlie is kind Erin is blue Erin is furry Erin is kind Erin is round Erin is smart Fiona is nice Fiona is smart All round, furry things are big If something is nice and round then it is blue If something is kind and furry then it is smart Kind things are big If something is blue and smart then it is furry If Bob is furry and Bob is big then Bob is nice Nice, smart things are kind If Bob is furry then Bob is smart All nice, big things are round. Question: Fiona is blue.",
+          "output": "entailment",
+          "metadata_id": "ruletaker_7850737747639079692",
+          "metadata_depth": 5,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 0,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 2,
+          "metadata_label_space": "entailment|not entailment",
+          "metadata_config": "depth-5"
+        },
+        {
+          "input": "Context: Anne is kind Anne is nice Anne is young Erin is red Gary is blue Gary is young Harry is nice Kind, big people are young If someone is young then they are red If Harry is blue and Harry is kind then Harry is nice All kind people are young Rough people are big If someone is big and rough then they are kind If someone is nice and kind then they are rough If someone is nice then they are rough. Question: Harry is rough.",
+          "output": "entailment",
+          "metadata_id": "ruletaker_829869948637479352",
+          "metadata_depth": 5,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 0,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 2,
+          "metadata_label_space": "entailment|not entailment",
+          "metadata_config": "depth-5"
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "Story: [Wayne] could n't wait to introduce his new son to his uncle, [Joshua] [Leonard] got into an argument with his brother [Wayne] and pushed him to the floor As he burst into tears [Leonard] ran to his mother [Cindy] for comfort. Query: Cindy is brother of Joshua",
+          "output": "True",
+          "metadata_id": "clutrr_8ea3180a-b1d0-4a55-979f-d96a34582a50",
+          "metadata_depth": 3,
+          "metadata_split": "test",
+          "metadata_gold_predicate_count": 4,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 20,
+          "metadata_label_space": "kinship_relation",
+          "metadata_f_comb": "son-brother-uncle",
+          "metadata_task_name": "task_1.3"
+        },
+        {
+          "input": "Story: [Amy] talks to her son [Glen] every day [Mary] was celebrating her birthday with her mother [Amy]. Query: Mary is brother of Glen",
+          "output": "True",
+          "metadata_id": "clutrr_d023bc8f-9c44-4e6d-aab4-9192bb4068d8",
+          "metadata_depth": 2,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 3,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 20,
+          "metadata_label_space": "kinship_relation",
+          "metadata_f_comb": "mother-son",
+          "metadata_task_name": "task_1.2"
+        },
+        {
+          "input": "Story: [Kyle] and his daughter [Maryann] took a day off school to go to the zoo [Charles] bought a new dress for his daughter [Bonita] [Donna] and her sister, [Bonita], frequently bicker However, they always make up quickly [Maryann] decided to give her uncle, [Mark], a call on his birthday [Mark] was disappointed that his father, [Charles], would n't be at the play to see him perform [Kyle] and his sister, [Susan] love it when their grandmother visits because she spoils them She is coming this week to watch them while their parents are out of town [John] and his brother, [Ronald] run a turtle farm [Ronald]'s brother, [Mark], recently made it into town [John] took his sister [Donna] out to lunch after learning that she got accepted into her first choice for university. Query: Susan is brother of Mark",
+          "output": "True",
+          "metadata_id": "clutrr_44848ced-4156-4bfc-835e-a778fe9dda9f",
+          "metadata_depth": 9,
+          "metadata_split": "train",
+          "metadata_gold_predicate_count": 10,
+          "metadata_task_type": "classification",
+          "metadata_n_classes": 20,
+          "metadata_label_space": "kinship_relation",
+          "metadata_f_comb": "brother-daughter-uncle-father-daughter-sister-brother-brother-brother",
+          "metadata_task_name": "task_1.9"
+        }
+      ]
+    }
+  ]
+}
