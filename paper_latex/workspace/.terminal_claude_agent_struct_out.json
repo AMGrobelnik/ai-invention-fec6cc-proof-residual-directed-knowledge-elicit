@@ -1,0 +1,14 @@
+{
+  "title": "PRKE Neuro-Symbolic Reasoning Paper Generation",
+  "summary": "Generated a complete 11-page publication-ready LaTeX paper titled 'Proof-Residual Directed Knowledge Elicitation: Inverting the Text-to-FOL Pipeline for Anti-Hallucinatory Neuro-Symbolic Reasoning'. The paper includes all required sections: Abstract, Introduction, Related Work, Method (with subsections on Seed Schema, Residual-Mode Backward Chaining, Binary LLM Elicitation, and Proof Execution), Experiments (with 5 experimental stages), Discussion, and Conclusion. All 3 figures from available_figures were included: fig1_v0.jpg (PRKE Pipeline Architecture, figure* full-width), fig2_v0.jpg (Accuracy Comparison bar chart, figure* full-width), and fig3_v0.jpg (Hallucination Metrics, figure* full-width). A results Table 1 was created comparing PRKE vs CoT vs Logic-LM on both FOLIO splits. Bibliography was built via aii_semscholar_bib__fetch for all 11 references (LINC/Olausson2023, Logic-LM/Pan2023, FOLIO/Han2022, ProofWriter/Tafjord2021, FoVer/Pei2025, NELLIE/Weir2024, NeSTR/Liang2025, ABL/Zhou2019, CLUTRR/Sinha2019, CoT/Wei2022, RuleTaker/Clark2020). Compilation used 4-step process (pdflatex, bibtex, pdflatex, pdflatex) and succeeded with no undefined references or citations. All figures verified (grep -c includegraphics = 3). Visual review of all 11 pages confirmed clean layout, proper figure placement, readable text, and no overlapping or cut-off content. The paper uses Times font, 1-inch margins, natbib citations, and hyperref with black links for a professional appearance.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg",
+      "figures/fig3_v0.jpg"
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Clark et~al.(2020)Clark, Tafjord, and Richardson]{Clark2020}
+Peter Clark, Oyvind Tafjord, and Kyle Richardson.
+\newblock Transformers as soft reasoners over language.
+\newblock In \emph{International Joint Conference on Artificial Intelligence},
+  pages 3882--3890, 2020.
+\newblock \doi{10.24963/ijcai.2020/537}.
+
+\bibitem[Han et~al.(2022)Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun,
+  Zubova, Qiao, Burtell, Peng, Fan, Liu, Wong, Sailor, Ni, Nan, Kasai, Yu,
+  Zhang, Joty, Fabbri, Kryscinski, Lin, Xiong, and Radev]{Han2022}
+Simeng Han, Hailey Schoelkopf, Yilun Zhao, Zhenting Qi, Martin Riddell, Luke
+  Benson, Lucy Sun, E.~Zubova, Yujie Qiao, Matthew Burtell, David Peng,
+  Jonathan~A. Fan, Yixin Liu, Brian Wong, Malcolm Sailor, Ansong Ni, Linyong
+  Nan, Jungo Kasai, Tao Yu, Rui Zhang, Shafiq~R. Joty, Alexander~R. Fabbri,
+  Wojciech Kryscinski, Xi~Victoria Lin, Caiming Xiong, and Dragomir~R. Radev.
+\newblock Folio: Natural language reasoning with first-order logic.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, 2022.
+\newblock \doi{10.48550/arXiv.2209.00840}.
+
+\bibitem[Liang et~al.(2025)Liang, Zeng, Zhao, and Zhao]{Liang2025}
+Feng Liang, Weixin Zeng, Runhao Zhao, and Xiang Zhao.
+\newblock Nestr: A neuro-symbolic abductive framework for temporal reasoning in
+  large language models.
+\newblock In \emph{AAAI Conference on Artificial Intelligence}, 2025.
+\newblock \doi{10.48550/arXiv.2512.07218}.
+
+\bibitem[Olausson et~al.(2023)Olausson, Gu, Lipkin, Zhang, Solar-Lezama,
+  Tenenbaum, and Levy]{Olausson2023}
+Theo~X. Olausson, Alex Gu, Benjamin Lipkin, Cedegao~E. Zhang, Armando
+  Solar-Lezama, Josh Tenenbaum, and Roger Levy.
+\newblock Linc: A neurosymbolic approach for logical reasoning by combining
+  language models with first-order logic provers.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 5153--5176, 2023.
+\newblock \doi{10.18653/v1/2023.emnlp-main.313}.
+
+\bibitem[Pan et~al.(2023)Pan, Albalak, Wang, and Wang]{Pan2023}
+Liangming Pan, Alon Albalak, Xinyi Wang, and William~Yang Wang.
+\newblock Logic-lm: Empowering large language models with symbolic solvers for
+  faithful logical reasoning.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing (Findings)}, 2023.
+\newblock \doi{10.48550/arXiv.2305.12295}.
+
+\bibitem[Pei et~al.(2025)Pei, Du, and Jin]{Pei2025}
+Yu~Pei, Yongping Du, and Xingnan Jin.
+\newblock Fover: First-order logic verification for natural language reasoning.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  13:\penalty0 1340--1359, 2025.
+\newblock \doi{10.1162/tacl.a.41}.
+
+\bibitem[Sinha et~al.(2019)Sinha, Sodhani, Dong, Pineau, and
+  Hamilton]{Sinha2019}
+Koustuv Sinha, Shagun Sodhani, Jin Dong, Joelle Pineau, and William~L.
+  Hamilton.
+\newblock Clutrr: A diagnostic benchmark for inductive reasoning from text.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 4505--4514, 2019.
+\newblock \doi{10.18653/v1/D19-1458}.
+
+\bibitem[Tafjord et~al.(2021)Tafjord, Dalvi, and Clark]{Tafjord2021}
+Oyvind Tafjord, Bhavana Dalvi, and Peter Clark.
+\newblock Proofwriter: Generating implications, proofs, and abductive
+  statements over natural language.
+\newblock In \emph{Findings of ACL-IJCNLP}, pages 3621--3634, 2021.
+\newblock \doi{10.18653/v1/2021.findings-acl.317}.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and
+  Zhou]{Wei2022}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed~H. Chi, Fei Xia,
+  Quoc Le, and Denny Zhou.
+\newblock Chain of thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Neural Information Processing Systems}, 2022.
+\newblock \doi{10.52202/068431-1800}.
+
+\bibitem[Weir and Durme(2024)]{Weir2024}
+Nathaniel Weir and Benjamin~Van Durme.
+\newblock Nellie: A neuro-symbolic inference engine for grounded,
+  compositional, and explainable reasoning.
+\newblock In \emph{International Joint Conference on Artificial Intelligence},
+  pages 3602--3612, 2024.
+\newblock \doi{10.24963/ijcai.2024/399}.
+
+\bibitem[Zhou(2019)]{Zhou2019}
+Zhi-Hua Zhou.
+\newblock Abductive learning: Towards bridging machine learning and logical
+  reasoning.
+\newblock \emph{Science China Information Sciences}, 62, 2019.
+\newblock \doi{10.1007/s11432-018-9801-4}.
+
+\end{thebibliography}
