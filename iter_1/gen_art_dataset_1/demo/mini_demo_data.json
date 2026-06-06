@@ -1,0 +1,3034 @@
+{
+  "metadata": {
+    "description": "Neuro-symbolic reasoning benchmarks: FOLIO (raw unified-schema rows for demo)",
+    "source": "HuggingFace: tasksource/folio",
+    "schema_version": "unified_schema_v1"
+  },
+  "datasets": [
+    {
+      "dataset": "folio",
+      "rows": [
+        {
+          "id": "folio_1126",
+          "premises": [
+            "All people who regularly drink coffee are dependent on caffeine.",
+            "People regularly drink coffee, or they don't want to be addicted to caffeine, or both.",
+            "No one who doesn't want to be addicted to caffeine is unaware that caffeine is a drug.",
+            "Rina is either a student who is unaware that caffeine is a drug, or she is not a student and is she aware that caffeine is a drug.",
+            "Rina  is either a student who is dependent on caffeine, or she is not a student and not dependent on caffeine."
+          ],
+          "hypothesis": "Rina doesn't want to be addicted to caffeine or is unaware that caffeine is a drug.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 406,
+            "premises_fol": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))",
+            "conclusion_fol": "¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))"
+          }
+        },
+        {
+          "id": "folio_1127",
+          "premises": [
+            "All people who regularly drink coffee are dependent on caffeine.",
+            "People regularly drink coffee, or they don't want to be addicted to caffeine, or both.",
+            "No one who doesn't want to be addicted to caffeine is unaware that caffeine is a drug.",
+            "Rina is either a student who is unaware that caffeine is a drug, or she is not a student and is she aware that caffeine is a drug.",
+            "Rina  is either a student who is dependent on caffeine, or she is not a student and not dependent on caffeine."
+          ],
+          "hypothesis": "Rina eith doesn't want to be addicted to caffeine or is unaware that caffeine is a drug.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 406,
+            "premises_fol": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))",
+            "conclusion_fol": "¬WantToBeAddictedTo(rina, caffeine) ⊕ ¬AwareThatDrug(rina, caffeine)"
+          }
+        },
+        {
+          "id": "folio_1129",
+          "premises": [
+            "All people who regularly drink coffee are dependent on caffeine.",
+            "People regularly drink coffee, or they don't want to be addicted to caffeine, or both.",
+            "No one who doesn't want to be addicted to caffeine is unaware that caffeine is a drug.",
+            "Rina is either a student who is unaware that caffeine is a drug, or she is not a student and is she aware that caffeine is a drug.",
+            "Rina  is either a student who is dependent on caffeine, or she is not a student and not dependent on caffeine."
+          ],
+          "hypothesis": "If Rina either doesn't want to be addicted to caffeine and is unaware that caffeine is a drug, or neither doesn't want to be addicted to caffeine nor is unaware that caffeine is a drug, then Rina doesn't want to be addicted to caffeine and regularly drinks coffee.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DoNotWantToBeAddictedToCaffeine",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "rina",
+                "coffee"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 406,
+            "premises_fol": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))",
+            "conclusion_fol": "(DoNotWantToBeAddictedToCaffeine(rina) ⊕ ¬AwareThatDrug(rina, caffeine)) → ¬(¬WantToBeAddictedTo(rina, caffeine) ∧ DrinkRegularly(rina, coffee))"
+          }
+        },
+        {
+          "id": "folio_21",
+          "premises": [
+            "Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.",
+            "Any choral conductor is a musician.",
+            "Some musicians love music.",
+            "Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant."
+          ],
+          "hypothesis": "A Czech published a book in 1946.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "Czech",
+              "args": [
+                "miroslav"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ChoralConductor",
+              "args": [
+                "miroslav"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SpecializeInPerformanceOf",
+              "args": [
+                "miroslav",
+                "renaissanceMusic"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SpecializeInPerformanceOf",
+              "args": [
+                "miroslav",
+                "baroqueMusic"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ChoralConductor",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Love",
+              "args": [
+                "x",
+                "music"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Love",
+              "args": [
+                "y",
+                "music"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "PublishedBook",
+              "args": [
+                "miroslav",
+                "methodOfStudyingGregorianChant",
+                "yr1946"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Czech",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "PublishedBook",
+              "args": [
+                "x",
+                "y",
+                "year1946"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 8,
+            "premises_fol": "Czech(miroslav) ∧ ChoralConductor(miroslav) ∧ SpecializeInPerformanceOf(miroslav, renaissanceMusic) ∧ SpecializeInPerformanceOf(miroslav, baroqueMusic)\n∀x (ChoralConductor(x) → Musician(x))\n∃x ∃y ((Musician(x) → Love(x, music)) ∧ (¬(x=y) ∧ Musician(y) → Love(y, music)))\nPublishedBook(miroslav, methodOfStudyingGregorianChant, yr1946)",
+            "conclusion_fol": "∃x ∃y (Czech(x) ∧ PublishedBook(x, y, year1946))"
+          }
+        },
+        {
+          "id": "folio_1338",
+          "premises": [
+            "All eels are fish.",
+            "No fish are plants.",
+            "Everything displayed in the collection is either a plant or an animal.",
+            "All multicellular animals are not bacteria.",
+            "All animals displayed in the collection are multicellular.",
+            "A sea eel is displayed in the collection.",
+            "The sea eel is an eel or an animal or not a plant."
+          ],
+          "hypothesis": "The sea eel is multicellular or is bacteria.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "Eel",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Fish",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Fish",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "x",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Multicellular",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Bacteria",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "x",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Multicellular",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "seaEel",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Eel",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Multicellular",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Bacteria",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 463,
+            "premises_fol": "∀x (Eel(x) → Fish(x))\n∀x (Fish(x) → ¬Plant(x))\n∀x (DisplayedIn(x, collection) → Plant(x) ⊕ Animal(x))\n∀x (Multicellular(x) → ¬Bacteria(x))\n∀x (DisplayedIn(x, collection) ∧ Animal(x) → Multicellular(x))\nDisplayedIn(seaEel, collection)\nEel(seaEel) ∨ Animal(seaEel) ∨ ¬Plant(seaEel)",
+            "conclusion_fol": "Multicellular(seaEel) ∨ Bacteria(seaEel)"
+          }
+        },
+        {
+          "id": "folio_392",
+          "premises": [
+            "The Blake McFall Company Building is a building added to the National Register of Historic Places in 1990.",
+            "The Emmet Building is a five-story building in Portland, Oregon.",
+            "The Emmet Building was built in 1915.",
+            "The Emmet Building is another name for the Blake McFall Company Building.",
+            "John works at the Emmet Building."
+          ],
+          "hypothesis": "A five-story building is built in 1915.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "Building",
+              "args": [
+                "blakeMcFallCompanyBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AddedToIn",
+              "args": [
+                "blakeMcFallCompanyBuilding",
+                "theNationalRegisterOfHistoricPlaces",
+                "year1990"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Building",
+              "args": [
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Story",
+              "args": [
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "emmetBuilding",
+                "portland"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "portland",
+                "oregon"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "BuiltIn",
+              "args": [
+                "emmetBuilding",
+                "year1915"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WorkAt",
+              "args": [
+                "john",
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Building",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Story",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ConstructedIn",
+              "args": [
+                "x",
+                "year1915"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 133,
+            "premises_fol": "Building(blakeMcFallCompanyBuilding) ∧ AddedToIn(blakeMcFallCompanyBuilding, theNationalRegisterOfHistoricPlaces, year1990)\nBuilding(emmetBuilding) ∧ Five-Story(emmetBuilding) ∧ LocatedIn(emmetBuilding, portland) ∧ LocatedIn(portland, oregon))\nBuiltIn(emmetBuilding, year1915)\nemmetBuiling=blakeMcFallCompanyBuilding\nWorkAt(john, emmetBuilding)",
+            "conclusion_fol": "∃x (Building(x) ∧ Five-Story(x) ∧ ConstructedIn(x, year1915))"
+          }
+        },
+        {
+          "id": "folio_393",
+          "premises": [
+            "The Blake McFall Company Building is a building added to the National Register of Historic Places in 1990.",
+            "The Emmet Building is a five-story building in Portland, Oregon.",
+            "The Emmet Building was built in 1915.",
+            "The Emmet Building is another name for the Blake McFall Company Building.",
+            "John works at the Emmet Building."
+          ],
+          "hypothesis": "The Blake McFall Company Building is located in Portland, Oregon.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "Building",
+              "args": [
+                "blakeMcFallCompanyBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AddedToIn",
+              "args": [
+                "blakeMcFallCompanyBuilding",
+                "theNationalRegisterOfHistoricPlaces",
+                "year1990"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Building",
+              "args": [
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Story",
+              "args": [
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "emmetBuilding",
+                "portland"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "portland",
+                "oregon"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "BuiltIn",
+              "args": [
+                "emmetBuilding",
+                "year1915"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WorkAt",
+              "args": [
+                "john",
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "blakeMcFallCompanyBuilding",
+                "portland"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 133,
+            "premises_fol": "Building(blakeMcFallCompanyBuilding) ∧ AddedToIn(blakeMcFallCompanyBuilding, theNationalRegisterOfHistoricPlaces, year1990)\nBuilding(emmetBuilding) ∧ Five-Story(emmetBuilding) ∧ LocatedIn(emmetBuilding, portland) ∧ LocatedIn(portland, oregon))\nBuiltIn(emmetBuilding, year1915)\nemmetBuiling=blakeMcFallCompanyBuilding\nWorkAt(john, emmetBuilding)",
+            "conclusion_fol": "LocatedIn(blakeMcFallCompanyBuilding, portland)"
+          }
+        },
+        {
+          "id": "folio_636",
+          "premises": [
+            "William Dickinson was a British politician who sat in the House of Commons",
+            "William Dickinson attended Westminster school for high school and then the University of Edinburgh.",
+            "The University of Edinburgh is a university located in the United Kingdom.",
+            "William Dickinson supported the Portland Whigs.",
+            "People who supported the Portland Whigs did not get a seat in the Parliament."
+          ],
+          "hypothesis": "William Dickinson did not get a seat in Parliament.",
+          "label": "True",
+          "gold_predicates": [
+            {
+              "name": "British",
+              "args": [
+                "williamDickinson"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Politician",
+              "args": [
+                "williamDickinson"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SatIn",
+              "args": [
+                "williamDickinson",
+                "houseOfCommons"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Attended",
+              "args": [
+                "williamDickinson",
+                "westminsterSchool"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Highschool",
+              "args": [
+                "westminsterSchool"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Attended",
+              "args": [
+                "williamDickinson",
+                "universityOfEdinburgh"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "University",
+              "args": [
+                "universityOfEdinburgh"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "universityOfEdinburgh",
+                "unitedKingdom"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Supported",
+              "args": [
+                "williamDickinson",
+                "portlandWhigs"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Supported",
+              "args": [
+                "x",
+                "portlandWhigs"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SatIn",
+              "args": [
+                "x",
+                "parliament"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SatIn",
+              "args": [
+                "williamDickinson",
+                "parliament"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 226,
+            "premises_fol": "British(williamDickinson) ∧ Politician(williamDickinson) ∧ SatIn(williamDickinson, houseOfCommons)\nAttended(williamDickinson, westminsterSchool) ∧ Highschool(westminsterSchool) ∧ Attended(williamDickinson, universityOfEdinburgh)\nUniversity(universityOfEdinburgh) ∧ LocatedIn(universityOfEdinburgh, unitedKingdom)\nSupported(williamDickinson, portlandWhigs)\n∀x (Supported(x, portlandWhigs) → ¬SatIn(x, parliament))",
+            "conclusion_fol": "SatIn(williamDickinson, parliament)"
+          }
+        },
+        {
+          "id": "folio_1128",
+          "premises": [
+            "All people who regularly drink coffee are dependent on caffeine.",
+            "People regularly drink coffee, or they don't want to be addicted to caffeine, or both.",
+            "No one who doesn't want to be addicted to caffeine is unaware that caffeine is a drug.",
+            "Rina is either a student who is unaware that caffeine is a drug, or she is not a student and is she aware that caffeine is a drug.",
+            "Rina  is either a student who is dependent on caffeine, or she is not a student and not dependent on caffeine."
+          ],
+          "hypothesis": "Rina either regularly drinks coffee or is unaware that caffeine is a drug.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "x",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WantToBeAddictedTo",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "x",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AwareThatDrug",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsDependentOn",
+              "args": [
+                "rina",
+                "caffeine"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Student",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DrinkRegularly",
+              "args": [
+                "rina",
+                "coffee"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "IsUnawareThatCaffeineIsADrug",
+              "args": [
+                "rina"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 406,
+            "premises_fol": "∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))\n∀x (DrinkRegularly(x, coffee)  ∨ (¬WantToBeAddictedTo(x, caffeine)))\n∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))\n¬(Student(rina) ⊕  ¬AwareThatDrug(rina, caffeine))\n¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))",
+            "conclusion_fol": "DrinkRegularly(rina, coffee)  ⊕ IsUnawareThatCaffeineIsADrug(rina)"
+          }
+        },
+        {
+          "id": "folio_22",
+          "premises": [
+            "Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.",
+            "Any choral conductor is a musician.",
+            "Some musicians love music.",
+            "Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant."
+          ],
+          "hypothesis": "No choral conductor specialized in the performance of Renaissance.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "Czech",
+              "args": [
+                "miroslav"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ChoralConductor",
+              "args": [
+                "miroslav"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SpecializeInPerformanceOf",
+              "args": [
+                "miroslav",
+                "renaissanceMusic"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SpecializeInPerformanceOf",
+              "args": [
+                "miroslav",
+                "baroqueMusic"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ChoralConductor",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Love",
+              "args": [
+                "x",
+                "music"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Love",
+              "args": [
+                "y",
+                "music"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "PublishedBook",
+              "args": [
+                "miroslav",
+                "methodOfStudyingGregorianChant",
+                "yr1946"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ChoralConductor",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SpecializeInPerformanceOf",
+              "args": [
+                "x",
+                "renaissanceMusic"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 8,
+            "premises_fol": "Czech(miroslav) ∧ ChoralConductor(miroslav) ∧ SpecializeInPerformanceOf(miroslav, renaissanceMusic) ∧ SpecializeInPerformanceOf(miroslav, baroqueMusic)\n∀x (ChoralConductor(x) → Musician(x))\n∃x ∃y ((Musician(x) → Love(x, music)) ∧ (¬(x=y) ∧ Musician(y) → Love(y, music)))\nPublishedBook(miroslav, methodOfStudyingGregorianChant, yr1946)",
+            "conclusion_fol": "∀x (ChoralConductor(x) → ¬SpecializeInPerformanceOf(x, renaissanceMusic))"
+          }
+        },
+        {
+          "id": "folio_1337",
+          "premises": [
+            "All eels are fish.",
+            "No fish are plants.",
+            "Everything displayed in the collection is either a plant or an animal.",
+            "All multicellular animals are not bacteria.",
+            "All animals displayed in the collection are multicellular.",
+            "A sea eel is displayed in the collection.",
+            "The sea eel is an eel or an animal or not a plant."
+          ],
+          "hypothesis": "The sea eel is bacteria.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "Eel",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Fish",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Fish",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "x",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Multicellular",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Bacteria",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "x",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Multicellular",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "seaEel",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Eel",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Bacteria",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 463,
+            "premises_fol": "∀x (Eel(x) → Fish(x))\n∀x (Fish(x) → ¬Plant(x))\n∀x (DisplayedIn(x, collection) → Plant(x) ⊕ Animal(x))\n∀x (Multicellular(x) → ¬Bacteria(x))\n∀x (DisplayedIn(x, collection) ∧ Animal(x) → Multicellular(x))\nDisplayedIn(seaEel, collection)\nEel(seaEel) ∨ Animal(seaEel) ∨ ¬Plant(seaEel)",
+            "conclusion_fol": "Bacteria(seaEel)"
+          }
+        },
+        {
+          "id": "folio_690",
+          "premises": [
+            "LanguageA is a universal language",
+            "If a universal language exists, then for every two people if they both know the same universal language they can communicate.",
+            "Katya cannot communicate with Danil.",
+            "Katya knows LanguageA."
+          ],
+          "hypothesis": "Danil knows LanguageA.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "UniversalLanguage",
+              "args": [
+                "languageA"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Know",
+              "args": [
+                "x",
+                "z"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Know",
+              "args": [
+                "y",
+                "z"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UniversalLanguage",
+              "args": [
+                "z"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "CanCommunicateWith",
+              "args": [
+                "x",
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "CanCommunicateWith",
+              "args": [
+                "y",
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "CanCommunicateWith",
+              "args": [
+                "katya",
+                "danil"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Know",
+              "args": [
+                "katya",
+                "languageA"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Know",
+              "args": [
+                "danil",
+                "languageA"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 247,
+            "premises_fol": "UniversalLanguage(languageA)\n∀x ∀y (∃z (¬(x=y) ∧ Know(x, z) ∧ Know(y, z) ∧ UniversalLanguage(z)) → CanCommunicateWith(x, y) ∧ CanCommunicateWith(y, x))\n¬CanCommunicateWith(katya, danil)\nKnow(katya, languageA)",
+            "conclusion_fol": "Know(danil, languageA)"
+          }
+        },
+        {
+          "id": "folio_1196",
+          "premises": [
+            "All customers in James' family who subscribe to AMC A-List are eligible to watch three movies every week without any additional fees.",
+            "Some of the customers in James' family go to the cinema every week.",
+            "Customers in James' family subscribe to AMC A-List or HBO service.",
+            "Customers in James' family who prefer TV series will not watch TV series in cinemas.",
+            "All customers in James' family who subscribe to HBO services prefer TV series to movies.",
+            "Lily is in James' family; she watches TV series in cinemas."
+          ],
+          "hypothesis": "If Lily is available to watch 3 movies every week without any additional fees and she watches TV series in cinemas, then she goes to cinemas every week and prefers TV series more.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "aMCAList"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "x",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "y",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "y",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "aMCAList"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "hBO"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Prefer",
+              "args": [
+                "x",
+                "tVSeries"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WatchIn",
+              "args": [
+                "x",
+                "tV",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "hBO"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Prefer",
+              "args": [
+                "x",
+                "tVSeries"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "lily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "lily",
+                "jameSFamily ∧ WatchIn(lily",
+                "tV",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees",
+              "args": [
+                "lily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WatchIn",
+              "args": [
+                "lily",
+                "tV",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "lily",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Prefer",
+              "args": [
+                "lily",
+                "tVSeries"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 422,
+            "premises_fol": "∀x ((Customer(x) ∧ In(x, jameSFamily) ∧ SubscribedTo(x, aMCAList)) →  EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees(x))\n∃x ∃y (Customer(x) ∧ In(x, jameSFamily) ∧ GoToEveryWeek(x, cinema) ∧ (¬(x=y)) ∧ Customer(y) ∧ In(y, jameSFamily) ∧ GoToEveryWeek(y, cinema))\n∀x (Customer(x) ∧ In(x, jameSFamily) ∧ (SubscribedTo(x, aMCAList) ∨ SubscribedTo(x, hBO)))\n∀x ((Customer(x) ∧ In(x, jameSFamily) ∧ Prefer(x, tVSeries)) → (¬WatchIn(x, tV, cinema)))\n∀x ((Customer(x) ∧ In(x, jameSFamily) ∧  Subscr",
+            "conclusion_fol": "(EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees(lily) ∧ WatchIn(lily, tV, cinema)) → (GoToEveryWeek(lily, cinema) ∧ Prefer(lily, tVSeries))"
+          }
+        },
+        {
+          "id": "folio_551",
+          "premises": [
+            "A La Liga soccer team ranks higher than another La Liga soccer team if it receives more points.",
+            "If there are two La Liga soccer teams and neither has more points than the other, then the team which receives more points from the games between the two teams ranks higher.",
+            "Real Madrid and Barcelona are both La Liga soccer teams.",
+            "Real Madrid received more points than Barcelona.",
+            "Neither Real Madrid nor Barcelona received more points from the games between them."
+          ],
+          "hypothesis": "Barcelona ranks higher than Real Madrid.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "LaLigaSoccerTeam",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LaLigaSoccerTeam",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "MorePoints",
+              "args": [
+                "x",
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "RankHigherThan",
+              "args": [
+                "x",
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LaLigaSoccerTeam",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LaLigaSoccerTeam",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "MorePoints",
+              "args": [
+                "x",
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "MorePoints",
+              "args": [
+                "y",
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "MorePointsInGameBetween",
+              "args": [
+                "x",
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "RankHigherThan",
+              "args": [
+                "x",
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LaLigaSoccerTeam",
+              "args": [
+                "realMadrid"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LaLigaSoccerTeam",
+              "args": [
+                "barcelona"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "MorePoints",
+              "args": [
+                "realMadrid",
+                "barcelona"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "MorePointsInGameBetween",
+              "args": [
+                "realMadrid",
+                "barcelona"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "MorePointsInGameBetween",
+              "args": [
+                "barcelona",
+                "realMadrid"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "RankHigherThan",
+              "args": [
+                "barcelona",
+                "realMadrid"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 193,
+            "premises_fol": "∀x ∀y (LaLigaSoccerTeam(x) ∧ LaLigaSoccerTeam(y) ∧ MorePoints(x, y) → RankHigherThan(x, y))\n∀x ∀y (LaLigaSoccerTeam(x) ∧ LaLigaSoccerTeam(y) ∧ ¬MorePoints(x, y) ∧ ¬MorePoints(y, x) ∧ MorePointsInGameBetween(x, y) →  RankHigherThan(x, y))\nLaLigaSoccerTeam(realMadrid) ∧ LaLigaSoccerTeam(barcelona)\nMorePoints(realMadrid, barcelona)\n¬MorePointsInGameBetween(realMadrid, barcelona) ∧ ¬MorePointsInGameBetween(barcelona, realMadrid)",
+            "conclusion_fol": "RankHigherThan(barcelona, realMadrid)"
+          }
+        },
+        {
+          "id": "folio_250",
+          "premises": [
+            "Lawton Park is a neighborhood in Seattle.",
+            "All citizens of Lawton Park use the zip code 98199.",
+            "Tom is a citizen of Lawton Park.",
+            "Daniel uses the zip code 98199."
+          ],
+          "hypothesis": "Tom doesn't use the zip code 98199.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "NeighbourhoodIn",
+              "args": [
+                "lawtonPark",
+                "seattle"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Residentof",
+              "args": [
+                "x",
+                "lawtonPark"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UseZipCode",
+              "args": [
+                "x",
+                "num98199"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ResidentOf",
+              "args": [
+                "tom",
+                "lawtonPark"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UseZipCode",
+              "args": [
+                "daniel",
+                "num98199"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UseZipCode",
+              "args": [
+                "tom",
+                "num98199"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 82,
+            "premises_fol": "NeighbourhoodIn(lawtonPark, seattle)\n∀x (Residentof(x, lawtonPark) → UseZipCode(x, num98199))\nResidentOf(tom, lawtonPark)\nUseZipCode(daniel, num98199)",
+            "conclusion_fol": "¬UseZipCode(tom, num98199)"
+          }
+        },
+        {
+          "id": "folio_262",
+          "premises": [
+            "If a legislator is found guilty of stealing government funds, they will be suspended from office.",
+            "Tiffany T. Alston was a legislator in Maryland's House of Delegates from 2011 to 2013.",
+            "Tiffany T. Alston was found guilty of stealing government funds in 2012."
+          ],
+          "hypothesis": "Tiffany T. Alston was not suspended from the Maryland House of Delegates.",
+          "label": "False",
+          "gold_predicates": [
+            {
+              "name": "Legislator",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "StealsFunds",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Suspended",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Legislator",
+              "args": [
+                "tiffanyTAlston"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "StealsFunds",
+              "args": [
+                "tiffanyTAlston"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "StealsFundsInYr",
+              "args": [
+                "tiffanyTAlston",
+                "yr2012"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Suspended",
+              "args": [
+                "tiffanyTAlston"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 86,
+            "premises_fol": "∀x ((Legislator(x) ∧ StealsFunds(x)) → Suspended(x))\nLegislator(tiffanyTAlston)\nStealsFunds(tiffanyTAlston) ∧ StealsFundsInYr(tiffanyTAlston, yr2012)",
+            "conclusion_fol": "¬Suspended(tiffanyTAlston)"
+          }
+        },
+        {
+          "id": "folio_20",
+          "premises": [
+            "Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.",
+            "Any choral conductor is a musician.",
+            "Some musicians love music.",
+            "Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant."
+          ],
+          "hypothesis": "Miroslav Venhoda loved music.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "Czech",
+              "args": [
+                "miroslav"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ChoralConductor",
+              "args": [
+                "miroslav"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SpecializeInPerformanceOf",
+              "args": [
+                "miroslav",
+                "renaissanceMusic"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SpecializeInPerformanceOf",
+              "args": [
+                "miroslav",
+                "baroqueMusic"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ChoralConductor",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Love",
+              "args": [
+                "x",
+                "music"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Musician",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Love",
+              "args": [
+                "y",
+                "music"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "PublishedBook",
+              "args": [
+                "miroslav",
+                "methodOfStudyingGregorianChant",
+                "yr1946"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Love",
+              "args": [
+                "miroslav",
+                "music"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 8,
+            "premises_fol": "Czech(miroslav) ∧ ChoralConductor(miroslav) ∧ SpecializeInPerformanceOf(miroslav, renaissanceMusic) ∧ SpecializeInPerformanceOf(miroslav, baroqueMusic)\n∀x (ChoralConductor(x) → Musician(x))\n∃x ∃y ((Musician(x) → Love(x, music)) ∧ (¬(x=y) ∧ Musician(y) → Love(y, music)))\nPublishedBook(miroslav, methodOfStudyingGregorianChant, yr1946)",
+            "conclusion_fol": "Love(miroslav, music)"
+          }
+        },
+        {
+          "id": "folio_1336",
+          "premises": [
+            "All eels are fish.",
+            "No fish are plants.",
+            "Everything displayed in the collection is either a plant or an animal.",
+            "All multicellular animals are not bacteria.",
+            "All animals displayed in the collection are multicellular.",
+            "A sea eel is displayed in the collection.",
+            "The sea eel is an eel or an animal or not a plant."
+          ],
+          "hypothesis": "The sea eel is an eel.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "Eel",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Fish",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Fish",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "x",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Multicellular",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Bacteria",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "x",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Multicellular",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "DisplayedIn",
+              "args": [
+                "seaEel",
+                "collection"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Eel",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Animal",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Plant",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Eel",
+              "args": [
+                "seaEel"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 463,
+            "premises_fol": "∀x (Eel(x) → Fish(x))\n∀x (Fish(x) → ¬Plant(x))\n∀x (DisplayedIn(x, collection) → Plant(x) ⊕ Animal(x))\n∀x (Multicellular(x) → ¬Bacteria(x))\n∀x (DisplayedIn(x, collection) ∧ Animal(x) → Multicellular(x))\nDisplayedIn(seaEel, collection)\nEel(seaEel) ∨ Animal(seaEel) ∨ ¬Plant(seaEel)",
+            "conclusion_fol": "Eel(seaEel)"
+          }
+        },
+        {
+          "id": "folio_394",
+          "premises": [
+            "The Blake McFall Company Building is a building added to the National Register of Historic Places in 1990.",
+            "The Emmet Building is a five-story building in Portland, Oregon.",
+            "The Emmet Building was built in 1915.",
+            "The Emmet Building is another name for the Blake McFall Company Building.",
+            "John works at the Emmet Building."
+          ],
+          "hypothesis": "John started his current job in 1990.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "Building",
+              "args": [
+                "blakeMcFallCompanyBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "AddedToIn",
+              "args": [
+                "blakeMcFallCompanyBuilding",
+                "theNationalRegisterOfHistoricPlaces",
+                "year1990"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Building",
+              "args": [
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Story",
+              "args": [
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "emmetBuilding",
+                "portland"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "portland",
+                "oregon"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "BuiltIn",
+              "args": [
+                "emmetBuilding",
+                "year1915"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WorkAt",
+              "args": [
+                "john",
+                "emmetBuilding"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "StartCurrentJobIn",
+              "args": [
+                "john",
+                "year1990"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 133,
+            "premises_fol": "Building(blakeMcFallCompanyBuilding) ∧ AddedToIn(blakeMcFallCompanyBuilding, theNationalRegisterOfHistoricPlaces, year1990)\nBuilding(emmetBuilding) ∧ Five-Story(emmetBuilding) ∧ LocatedIn(emmetBuilding, portland) ∧ LocatedIn(portland, oregon))\nBuiltIn(emmetBuilding, year1915)\nemmetBuiling=blakeMcFallCompanyBuilding\nWorkAt(john, emmetBuilding)",
+            "conclusion_fol": "StartCurrentJobIn(john, year1990)"
+          }
+        },
+        {
+          "id": "folio_637",
+          "premises": [
+            "William Dickinson was a British politician who sat in the House of Commons",
+            "William Dickinson attended Westminster school for high school and then the University of Edinburgh.",
+            "The University of Edinburgh is a university located in the United Kingdom.",
+            "William Dickinson supported the Portland Whigs.",
+            "People who supported the Portland Whigs did not get a seat in the Parliament."
+          ],
+          "hypothesis": "William Dickinson went to schools located in the United Kingdom for both high school and university.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "British",
+              "args": [
+                "williamDickinson"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Politician",
+              "args": [
+                "williamDickinson"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SatIn",
+              "args": [
+                "williamDickinson",
+                "houseOfCommons"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Attended",
+              "args": [
+                "williamDickinson",
+                "westminsterSchool"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Highschool",
+              "args": [
+                "westminsterSchool"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Attended",
+              "args": [
+                "williamDickinson",
+                "universityOfEdinburgh"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "University",
+              "args": [
+                "universityOfEdinburgh"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "universityOfEdinburgh",
+                "unitedKingdom"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Supported",
+              "args": [
+                "williamDickinson",
+                "portlandWhigs"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Supported",
+              "args": [
+                "x",
+                "portlandWhigs"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SatIn",
+              "args": [
+                "x",
+                "parliament"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Attended",
+              "args": [
+                "williamDickinson",
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Highschool",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "x",
+                "unitedKingdom"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Attended",
+              "args": [
+                "williamDickinson",
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "University",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "LocatedIn",
+              "args": [
+                "y",
+                "unitedKingdom"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 226,
+            "premises_fol": "British(williamDickinson) ∧ Politician(williamDickinson) ∧ SatIn(williamDickinson, houseOfCommons)\nAttended(williamDickinson, westminsterSchool) ∧ Highschool(westminsterSchool) ∧ Attended(williamDickinson, universityOfEdinburgh)\nUniversity(universityOfEdinburgh) ∧ LocatedIn(universityOfEdinburgh, unitedKingdom)\nSupported(williamDickinson, portlandWhigs)\n∀x (Supported(x, portlandWhigs) → ¬SatIn(x, parliament))",
+            "conclusion_fol": "∃x ∃y (Attended(williamDickinson, x) ∧ Highschool(x) ∧ LocatedIn(x, unitedKingdom) ∧ Attended(williamDickinson, y) ∧ University(y) ∧ LocatedIn(y, unitedKingdom))"
+          }
+        },
+        {
+          "id": "folio_1192",
+          "premises": [
+            "All customers in James' family who subscribe to AMC A-List are eligible to watch three movies every week without any additional fees.",
+            "Some of the customers in James' family go to the cinema every week.",
+            "Customers in James' family subscribe to AMC A-List or HBO service.",
+            "Customers in James' family who prefer TV series will not watch TV series in cinemas.",
+            "All customers in James' family who subscribe to HBO services prefer TV series to movies.",
+            "Lily is in James' family; she watches TV series in cinemas."
+          ],
+          "hypothesis": "Lily goes to cinemas every week.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "aMCAList"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "x",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "y",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "y",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "aMCAList"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "hBO"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Prefer",
+              "args": [
+                "x",
+                "tVSeries"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WatchIn",
+              "args": [
+                "x",
+                "tV",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "hBO"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Prefer",
+              "args": [
+                "x",
+                "tVSeries"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "lily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "lily",
+                "jameSFamily ∧ WatchIn(lily",
+                "tV",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "lily",
+                "cinema"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 422,
+            "premises_fol": "∀x ((Customer(x) ∧ In(x, jameSFamily) ∧ SubscribedTo(x, aMCAList)) →  EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees(x))\n∃x ∃y (Customer(x) ∧ In(x, jameSFamily) ∧ GoToEveryWeek(x, cinema) ∧ (¬(x=y)) ∧ Customer(y) ∧ In(y, jameSFamily) ∧ GoToEveryWeek(y, cinema))\n∀x (Customer(x) ∧ In(x, jameSFamily) ∧ (SubscribedTo(x, aMCAList) ∨ SubscribedTo(x, hBO)))\n∀x ((Customer(x) ∧ In(x, jameSFamily) ∧ Prefer(x, tVSeries)) → (¬WatchIn(x, tV, cinema)))\n∀x ((Customer(x) ∧ In(x, jameSFamily) ∧  Subscr",
+            "conclusion_fol": "GoToEveryWeek(lily, cinema)"
+          }
+        },
+        {
+          "id": "folio_1193",
+          "premises": [
+            "All customers in James' family who subscribe to AMC A-List are eligible to watch three movies every week without any additional fees.",
+            "Some of the customers in James' family go to the cinema every week.",
+            "Customers in James' family subscribe to AMC A-List or HBO service.",
+            "Customers in James' family who prefer TV series will not watch TV series in cinemas.",
+            "All customers in James' family who subscribe to HBO services prefer TV series to movies.",
+            "Lily is in James' family; she watches TV series in cinemas."
+          ],
+          "hypothesis": "Lily does not go to cinemas every week.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "aMCAList"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "x",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "y"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "y",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "y",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "aMCAList"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "hBO"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Prefer",
+              "args": [
+                "x",
+                "tVSeries"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "WatchIn",
+              "args": [
+                "x",
+                "tV",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "x"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "x",
+                "jameSFamily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "SubscribedTo",
+              "args": [
+                "x",
+                "hBO"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Prefer",
+              "args": [
+                "x",
+                "tVSeries"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Customer",
+              "args": [
+                "lily"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "In",
+              "args": [
+                "lily",
+                "jameSFamily ∧ WatchIn(lily",
+                "tV",
+                "cinema"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "GoToEveryWeek",
+              "args": [
+                "lily",
+                "cinema"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 422,
+            "premises_fol": "∀x ((Customer(x) ∧ In(x, jameSFamily) ∧ SubscribedTo(x, aMCAList)) →  EligibleForThreeFreeMoviesEveryWeekWithoutAdditionalFees(x))\n∃x ∃y (Customer(x) ∧ In(x, jameSFamily) ∧ GoToEveryWeek(x, cinema) ∧ (¬(x=y)) ∧ Customer(y) ∧ In(y, jameSFamily) ∧ GoToEveryWeek(y, cinema))\n∀x (Customer(x) ∧ In(x, jameSFamily) ∧ (SubscribedTo(x, aMCAList) ∨ SubscribedTo(x, hBO)))\n∀x ((Customer(x) ∧ In(x, jameSFamily) ∧ Prefer(x, tVSeries)) → (¬WatchIn(x, tV, cinema)))\n∀x ((Customer(x) ∧ In(x, jameSFamily) ∧  Subscr",
+            "conclusion_fol": "¬GoToEveryWeek(lily, cinema)"
+          }
+        },
+        {
+          "id": "folio_251",
+          "premises": [
+            "Lawton Park is a neighborhood in Seattle.",
+            "All citizens of Lawton Park use the zip code 98199.",
+            "Tom is a citizen of Lawton Park.",
+            "Daniel uses the zip code 98199."
+          ],
+          "hypothesis": "Tom is a citizen of Washington.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "NeighbourhoodIn",
+              "args": [
+                "lawtonPark",
+                "seattle"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Residentof",
+              "args": [
+                "x",
+                "lawtonPark"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UseZipCode",
+              "args": [
+                "x",
+                "num98199"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ResidentOf",
+              "args": [
+                "tom",
+                "lawtonPark"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UseZipCode",
+              "args": [
+                "daniel",
+                "num98199"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ResidentOf",
+              "args": [
+                "tom",
+                "washington"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 82,
+            "premises_fol": "NeighbourhoodIn(lawtonPark, seattle)\n∀x (Residentof(x, lawtonPark) → UseZipCode(x, num98199))\nResidentOf(tom, lawtonPark)\nUseZipCode(daniel, num98199)",
+            "conclusion_fol": "ResidentOf(tom, washington)"
+          }
+        },
+        {
+          "id": "folio_252",
+          "premises": [
+            "Lawton Park is a neighborhood in Seattle.",
+            "All citizens of Lawton Park use the zip code 98199.",
+            "Tom is a citizen of Lawton Park.",
+            "Daniel uses the zip code 98199."
+          ],
+          "hypothesis": "Daniel is a citizen of Lawton Park.",
+          "label": "Uncertain",
+          "gold_predicates": [
+            {
+              "name": "NeighbourhoodIn",
+              "args": [
+                "lawtonPark",
+                "seattle"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "Residentof",
+              "args": [
+                "x",
+                "lawtonPark"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UseZipCode",
+              "args": [
+                "x",
+                "num98199"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ResidentOf",
+              "args": [
+                "tom",
+                "lawtonPark"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "UseZipCode",
+              "args": [
+                "daniel",
+                "num98199"
+              ],
+              "truth_value": true
+            },
+            {
+              "name": "ResidentOf",
+              "args": [
+                "daniel",
+                "lawtonPark"
+              ],
+              "truth_value": true
+            }
+          ],
+          "dataset": "folio",
+          "depth": 3,
+          "split": "train",
+          "metadata": {
+            "story_id": 82,
+            "premises_fol": "NeighbourhoodIn(lawtonPark, seattle)\n∀x (Residentof(x, lawtonPark) → UseZipCode(x, num98199))\nResidentOf(tom, lawtonPark)\nUseZipCode(daniel, num98199)",
+            "conclusion_fol": "ResidentOf(daniel, lawtonPark)"
+          }
+        }
+      ]
+    }
+  ]
+}

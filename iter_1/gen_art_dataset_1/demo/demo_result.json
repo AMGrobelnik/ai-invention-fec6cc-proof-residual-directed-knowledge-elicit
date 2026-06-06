@@ -1,0 +1,15 @@
+{
+  "kind": "code_demo",
+  "id": "gen_art_dataset_1",
+  "type": "code",
+  "iteration": 1,
+  "title": "Neuro-Symbolic Reasoning: FOLIO+ProofWriter+RuleTaker+CLUTRR",
+  "summary": "This dataset artifact assembles four neuro-symbolic reasoning benchmarks from HuggingFace into a unified JSON schema for hypothesis testing around hallucination in neuro-symbolic multi-hop reasoning:\n\n1. **FOLIO** (`tasksource/folio`): 1,204 human-expert-annotated examples with natural language premises and first-order logic (FOL) annotations. Labels are True/False/Uncertain (3-class). Each example includes gold predicate atoms parsed from premises-FOL and conclusion-FOL fields via regex (e.g., `DrinkRegularly(x, coffee)` \u2192 `{name: DrinkRegularly, args: [x, coffee], truth_value: true}`). Mean gold predicate count: 15.94 per example. Source: Han et al., EMNLP 2022.\n\n2. **ProofWriter OWA Depth-5** (`tasksource/proofwriter`): 50,000 examples filtered to OWA configs (id contains 'OWA') and maxD\u22655. Labels are True/False/Unknown (3-class). Theory field provides NL facts+rules; gold predicates extracted via capitalized-entity regex. Mean depth: 5.09. Source: Tafjord et al., ACL 2021.\n\n3. **RuleTaker Depth-3+5** (`tasksource/ruletaker`): 60,000 examples filtered to depth-3 and depth-5 configs. Binary labels (entailment/not entailment). No gold FOL annotations by design \u2014 gold_predicates is empty. Mean depth: 5.0. Source: Clark et al., IJCAI 2020.\n\n4. **CLUTRR** (`kendrivp/CLUTRR_v1_extracted`): 30,000 kinship relational reasoning examples with gold proof_state and story_edges/edge_types fields encoding relational predicates. Labels are always 'True' (kinship inference task). Mean depth: 3.17, max depth: 10. Gold predicate count: 4.17 mean. Source: Sinha et al., EMNLP 2019.\n\nAll four datasets are standardized to a unified schema: {id, premises[], hypothesis, label, gold_predicates[], dataset, depth, split, metadata}. The full_data_out.json contains 16,204 examples (1,204 FOLIO + 5,000 ProofWriter + 5,000 RuleTaker + 5,000 CLUTRR) in the exp_sel_data_out format with input/output/metadata_* fields.\n\nAdditional outputs: pilot_split.json (200 rows: 100 RuleTaker balanced + 100 CLUTRR), pilot_held_out.json (200 rows), dataset_stats.json with per-dataset statistics, and individual full-size files for each dataset (folio_full.json 3.8MB, proofwriter_owa_d5_full.json 94MB, ruletaker_d3d5_full.json 62MB, clutrr_full.json 40MB).",
+  "original_path": "/ai-inventor/aii_data/runs/b16e7/3_invention_loop/iter_1/gen_art/gen_art_dataset_1",
+  "demo_path": "/ai-inventor/aii_data/runs/b16e7/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_dataset_1",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_data/runs/b16e7/4_gen_paper_repo/_3_gen_art_demo/iter_1/gen_art_dataset_1/data_code_demo.ipynb"
+}
